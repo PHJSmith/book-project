@@ -1,0 +1,35 @@
+.navigationtop {
+  overflow: hidden;
+  background: -moz-linear-gradient($darkBlue, $lightBlue);
+  background: -webkit-linear-gradient($darkBlue, $lightBlue);
+  background: -o-linear-gradient($darkBlue, $lightBlue);
+  background: linear-gradient($darkBlue, $lightBlue);
+}
+.navigation2top {
+  overflow: hidden;
+  background-color: $lightBlue;
+}
+
+.navigation2top a {
+font-family: $commonFont;
+  float: left;
+  display: block;
+  color: $lightGrey1;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.navigation2top a:hover {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+     transition:.7s;
+     color: $white;
+}
+
+.navigation2top a.active {
+    color: $white;
+}

@@ -1,0 +1,57 @@
+.indexposition {
+    font-family: $commonFont;
+    background-color: $lightPink;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 340px;
+    height: 198px;
+    margin-left: -158px;
+    margin-top: -84px;
+    border-radius: 5px;
+}
+.indexlogin input {
+    font-family: $commonFont;
+    height: 25px;
+    border: 1px solid black;
+    width: 306px;
+    background-color: $lightBlue;
+}
+.indexheader h1 {
+    font-family: $commonFont;
+    color: $lightBlue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    margin-left: -160px;
+    margin-top: -150px;
+}
+.indexerrorcolour {
+    color: $white;
+}
+.indexcolumn {
+    display: inline-block;
+    width: 49%;
+}
+.indexcolumn2 {
+    width: 49%;
+    display: inline-block;
+}
+.indexbody {
+    font-family: $commonFont;
+    background-color: $black;
+}
+.indexalign input {
+    font-family: $commonFont;
+    text-align: left;
+    height: 25px;
+    border: 1px solid black;
+    background-color: $lightPink1;
+    padding: 3px;
+}
+.indextest h1, p, form, input{
+    border-radius: 2px;
+    margin: 0, auto;
+}

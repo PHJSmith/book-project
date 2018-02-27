@@ -1,0 +1,52 @@
+input {
+    width: 304px;
+    border-radius: 5px;
+    border: 1px solid $lightBlue;
+    font-size: 14px;
+    margin-bottom: 5px;
+    height: 20px;
+}
+
+textarea {
+    min-width: 304px;
+    max-width: 304px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid $lightBlue;
+    font-family: $commonFont;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+select {
+    min-width: 304px;
+    min-height: 22px;
+    border-radius: 2px;
+    border: 1px solid $lightBlue;
+    font-family: $commonFont;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form {
+    padding: 0 10px 0 13px;
+    font-family: $commonFont;
+}
+.getcharacterform {
+    width: 200px;
+    border-radius: 2px;
+    border: 1px solid $white;
+    font-family: $commonFont;
+}
+.getcharactersubmit {
+    width: 200px;
+    border-radius: 2px;
+    border: 1px solid $lightBlue;
+    font-family: $commonFont;
+}
+.submit {
+    width: 308px;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: $commonFont;
+}

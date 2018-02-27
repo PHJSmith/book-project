@@ -1,0 +1,338 @@
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);#loadoverlay {
+  display: none;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #e7e7e7;
+  font-size: 18px;
+}
+
+body {
+  font-size: 1em;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #1c1c1c;
+}
+
+.universalbody {
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #1c1c1c;
+  text-align: center;
+  font-size: 2.3em;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  color: #1c1c1c;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.25em;
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  text-align: left;
+  font-size: 1.25;
+  padding: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 1em;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.pclass2 {
+  font-size: 1.5em;
+  padding-left: 1.73em;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: "Roboto", sans-serif;
+}
+
+.pclass3 {
+  font-size: 1em;
+  padding-left: 2.6em;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+
+.edit-project-header {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 14px;
+}
+
+.homepage {
+  color: #ffffff;
+  font-size: 1.875em;
+  padding: 15px 12px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.homepagemaindivider {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #9f9f9f;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #000000;
+  padding: 6px;
+  border: 1px solid #5075d8;
+  border-radius: 3px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.wrap {
+  width: 90%;
+  margin: auto;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigationtop {
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5532a6), to(#5075d8));
+  background: linear-gradient(#5532a6, #5075d8);
+}
+
+.navigation2top {
+  overflow: hidden;
+  background-color: #5075d8;
+}
+
+.navigation2top a {
+  font-family: "Roboto", sans-serif;
+  float: left;
+  display: block;
+  color: #dbdbdb;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.navigation2top a:hover {
+  -webkit-transition: .5s;
+  -webkit-transition: .7s;
+  transition: .7s;
+  color: #ffffff;
+}
+
+.navigation2top a.active {
+  color: #ffffff;
+}
+
+input {
+  width: 304px;
+  border-radius: 5px;
+  border: 1px solid #5075d8;
+  font-size: 14px;
+  margin-bottom: 5px;
+  height: 20px;
+}
+
+textarea {
+  min-width: 304px;
+  max-width: 304px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #5075d8;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+select {
+  min-width: 304px;
+  min-height: 22px;
+  border-radius: 2px;
+  border: 1px solid #5075d8;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+form {
+  padding: 0 10px 0 13px;
+  font-family: "Roboto", sans-serif;
+}
+
+.getcharacterform {
+  width: 200px;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.getcharactersubmit {
+  width: 200px;
+  border-radius: 2px;
+  border: 1px solid #5075d8;
+  font-family: "Roboto", sans-serif;
+}
+
+.submit {
+  width: 308px;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+}
+
+#dropdown {
+  border: 1px solid #5075d8;
+  border-radius: 3px;
+  width: 308px;
+  margin-bottom: 5px;
+  height: 20px;
+}
+
+.indexposition {
+  font-family: "Roboto", sans-serif;
+  background-color: #fde2ff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  width: 340px;
+  height: 198px;
+  margin-left: -158px;
+  margin-top: -84px;
+  border-radius: 5px;
+}
+
+.indexlogin input {
+  font-family: "Roboto", sans-serif;
+  height: 25px;
+  border: 1px solid black;
+  width: 306px;
+  background-color: #5075d8;
+}
+
+.indexheader h1 {
+  font-family: "Roboto", sans-serif;
+  color: #5075d8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  margin-left: -160px;
+  margin-top: -150px;
+}
+
+.indexerrorcolour {
+  color: #ffffff;
+}
+
+.indexcolumn {
+  display: inline-block;
+  width: 49%;
+}
+
+.indexcolumn2 {
+  width: 49%;
+  display: inline-block;
+}
+
+.indexbody {
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+}
+
+.indexalign input {
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  height: 25px;
+  border: 1px solid black;
+  background-color: #feebff;
+  padding: 3px;
+}
+
+.indextest h1,
+p,
+form,
+input {
+  border-radius: 2px;
+  margin: 0, auto;
+}
+
+.overlay {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2000px;
+}
+
+.padding {
+  padding: 0 10px 0 14px;
+}
+
+table {
+  width: 72.9%;
+  border-collapse: collapse;
+  table-layout: auto;
+  display: block;
+  overflow: auto;
+}
+
+table,
+td,
+th {
+  border: 1px solid #5075d8;
+  padding: 5px;
+}
+
+th {
+  text-align: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.testdiv {
+  display: inline-block;
+  padding: 0 2em 2em 2em;
+}
+
+.align {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
