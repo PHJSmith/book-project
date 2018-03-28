@@ -7,38 +7,30 @@ use App\{ Character, Project };
 
 class CharacterController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('characterinformation.index', [
+        // List all characters
+        return view('character.index', [
           'projects' => Project::all(),
+          'character' => Character::all(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     // Redirect to the create form for a single character
     public function create()
     {
-        //
+      return view('character.create', [
+        'character' => Character::all(),
+        'characters' => Character::all(),
+        'projects' => Project::all(),
+      ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+     // Add database entry for character
     public function store(Request $request)
     {
       $character = Character::create([
-        'project_id' => $request->input('project_id'),
+        'project_id' => $request->input('projectname'),
         'forename' => $request->input('forename'),
         'surname' => $request->input('surname'),
         'nickname' => $request->input('nickname'),
@@ -46,6 +38,13 @@ class CharacterController extends Controller
         'date_of_death' => $request->input('date_of_death'),
         'year_of_description' => $request->input('year_of_description'),
         'occupation' => $request->input('occupation'),
+        'place_of_birth' => $request->input('place_of_birth'),
+        'race' => $request->input('race'),
+        'national_loyalty' => $request->input('national_loyalty'),
+        'organisation' => $request->input('organisation'),
+        'agenda' => $request->input('agenda'),
+        'weaponry' => $request->input('weaponry'),
+        'skills' => $request->input('skills'),
         'character_importance' => $request->input('character_importance'),
         'height' => $request->input('height'),
         'hair_colour' => $request->input('hair_colour'),
@@ -58,50 +57,53 @@ class CharacterController extends Controller
         'voice' => $request->input('voice'),
         'other_styles' => $request->input('other_styles'),
       ]);
-      return redirect()->route('characterinformation.index');
+      return redirect()->route('character.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+     // View a single character
+    public function show(Character $character)
     {
-        //
+        return view('character.show', [
+          'character' => $character,
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+     // Redirect to the update form for an EXISTING Character
+    public function edit(Character $character)
     {
-        //
+        return view('character.edit', [
+          'character' => $character,
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Character $character, $id)
+     // Update database entry for an EXISTING Character
+    public function update(Character $character, Request $request)
     {
-      Project::where('id', $id)->update($character->all());
-      return redirect()->route('editproject.show.blade');
+      $character->forename = $request->input('forename');
+      $character->surname = $request->input('surname');
+      $character->nickname = $request->input('nickname');
+      $character->date_of_birth = $request->input('date_of_birth');
+      $character->date_of_death = $request->input('date_of_death');
+      $character->year_of_description = $request->input('year_of_description');
+      $character->occupation = $request->input('occupation');
+      $character->character_importance = $request->input('character_importance');
+      $character->height = $request->input('height');
+      $character->hair_colour = $request->input('hair_colour');
+      $character->eye_colour = $request->input('eye_colour');
+      $character->weight = $request->input('weight');
+      $character->hair_style = $request->input('hair_style');
+      $character->misc_features = $request->input('misc_features');
+      $character->clothing = $request->input('clothing');
+      $character->normal_clothing = $request->input('normal_clothing');
+      $character->voice = $request->input('voice');
+      $character->other_styles = $request->input('other_styles');
+
+
+      $character->save();
+
+      return redirect()->route('project.show', $character->project_id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

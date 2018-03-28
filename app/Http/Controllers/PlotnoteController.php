@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Project;
+use App\ { Plotnote, Project };
 
-class NewProjectController extends Controller
+class PlotnoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,11 @@ class NewProjectController extends Controller
      */
     public function index()
     {
-        return view('newproject.index', [
-          'projects' => Project::all(),
-        ]);
-    }  //
+      return view('plotnote.index', [
+        'project' => Project::all(),
+        'projects' => Project::all(),
+      ]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +27,10 @@ class NewProjectController extends Controller
      */
     public function create()
     {
-        //
+      return view('plotnote.create', [
+        'project' => Project::all(),
+        'projects' => Project::all(),
+      ]);
     }
 
     /**
@@ -37,15 +41,13 @@ class NewProjectController extends Controller
      */
     public function store(Request $request)
     {
-        $project = Project::create([
-          'user_name' => 'yo_homie',
-          'project_name' => $request->input('projectname'),
-          'book_name' => $request->input('bookname'),
-          'genre' => $request->input('genre'),
-          'number_of_books' => $request->input('numberofbooks'),
+        $plotnote = Plotnote::create([
+          'project_id' => $request->input('projectname'),
+          'note_title' => $request->input('note_title'),
+          'note_type' => $request->input('note_type'),
+          'content' => $request->input('content'),
         ]);
-
-        return redirect()->route('editproject.index');
+      return redirect()->route('plotnote.index');
     }
 
     /**
@@ -54,14 +56,9 @@ class NewProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show($id)
     {
-          $projects = Project::find($project);
-          return view('editproject.show', compact('projects'));
-          return view('editproject.show', [
-            'projects' => Project::all(),
-          ]);
-
+        //
     }
 
     /**
@@ -70,9 +67,11 @@ class NewProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plotnote $plotnote)
     {
-        //
+      return view('plotnote.edit', [
+        'plotnote' => $plotnote,
+      ]);
     }
 
     /**
@@ -82,9 +81,16 @@ class NewProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Plotnote $plotnote, Request $request)
     {
-        //
+      $plotnote->note_title = $request->input('note_title');
+      $plotnote->note_type = $request->input('note_type');
+      $plotnote->content = $request->input('content');
+
+
+      $plotnote->save();
+
+      return redirect()->route('project.show', $plotnote->project_id);
     }
 
     /**

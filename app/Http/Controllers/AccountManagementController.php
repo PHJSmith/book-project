@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
+use Auth;
+
 class AccountManagementController extends Controller
 {
     /**
@@ -11,9 +15,11 @@ class AccountManagementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        return view('accountmanagement.index');
+      return view('accountmanagement.index', [
+              'user' => Auth::user(),
+          ]);
     }
 
     /**
@@ -43,9 +49,9 @@ class AccountManagementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+      //
     }
 
     /**

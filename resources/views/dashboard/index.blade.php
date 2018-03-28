@@ -10,12 +10,13 @@
   <br>
   <div class="indexcolumn">
       <h3>
-      <a href="{{ route('newproject.index') }}" class="button">Create a new project</a>
+      <a href="{{ route('project.create') }}" class="button">Create a new project</a>
       </h3>
   </div>
   <div class="indexcolumn2">
       <h3>
-      <a href="{{ route('editproject.index') }}" class="button">Edit an existing project</a>
+      <a href="{{ route('project.index') }}" class="button">Edit an existing project</a>
       </h3>
   </div>
+
 @endsection

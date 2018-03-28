@@ -6,7 +6,7 @@
     <!--Creating a dropdown box for project_name values-->
     <div class="align">
         <!--VALIDATE THIS FORM-->
-        <form action="{{ route('characterinformation.store') }}" method="POST" id="characterinformationformtest" enctype="multipart/form-data">
+        <form action="{{ route('character.store') }}" method="POST" id="characterformtest" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="testdiv" style="text-align: left;">
                 <label for="projectname">Project name:</label>
@@ -15,6 +15,7 @@
                       <option>Select a project:</option>
                       @foreach ($projects as $project)
                         <option value="{{ $project->id }}">{{ $project->project_name }}</option>
+                        {{$project_id = $project->id}}
                       @endforeach
                     </select>
                 </div>
@@ -25,7 +26,7 @@
                 <input type="text" name="surname" id="surname" maxlength="20" required placeholder="Surname">
             </div>
             <div class="group">
-                <input type="text" name="nickname" id="nickname" maxlength="20" placeholder="Nickname">
+                <input type="text" name="nickname" id="nickname" maxlength="60" placeholder="Nickname">
             </div>
             <div class="group">
                 <input type="text" name="date_of_birth" id="date_of_birth" maxlength="20" placeholder="Date of birth">
@@ -38,6 +39,27 @@
             </div>
             <div class="group">
                 <input type="text" name="occupation" id="occupation" maxlength="30" placeholder="Occupation">
+            </div>
+            <div class="group">
+                <input type="text" name="place_of_birth" id="place_of_birth" maxlength="20" placeholder="Place of birth">
+            </div>
+            <div class="group">
+                <input type="text" name="race" id="race" maxlength="20" placeholder="Race">
+            </div>
+            <div class="group">
+                <input type="text" name="national_loyalty" id="national_loyalty" maxlength="20" placeholder="National loyalty">
+            </div>
+            <div class="group">
+                <input type="text" name="organisation" id="organisation" maxlength="20" placeholder="Organisation">
+            </div>
+            <div class="group">
+                <input type="text" name="agenda" id="agenda" maxlength="20" placeholder="Agenda">
+            </div>
+            <div class="group">
+                <input type="text" name="weaponry" id="weaponry" maxlength="20" placeholder="Weaponry">
+            </div>
+            <div class="group">
+                <input type="text" name="skills" id="skills" maxlength="20" placeholder="Skills">
             </div>
             <div class="group">
                 <input type="text" name="character_importance" id="character_importance" maxlength="20" placeholder="Character importance">
@@ -82,7 +104,7 @@
                     <img id="image" src="#" alt="" />
                 </div>
                 <div class="group">
-                    <input type="submit" class="submit" value="Submit and proceed" name="characterinformationsubmit" id="characterinformationsubmitid">
+                    <input type="submit" class="submit" value="Submit and proceed" name="charactersubmit" id="charactersubmitid">
                 </div>
             </div>
         </form>

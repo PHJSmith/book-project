@@ -14,19 +14,19 @@
    </div>
 
    <div class="align">
-        <form action="{{ route('newproject.store') }}" method="POST">
+        <form action="{{ route('project.store') }}" method="POST">
           {{ csrf_field() }}
             <div class="testdiv">
                 Project name:<br>
-                <input type="text" name="projectname" maxlength="20" >
+                <input type="text" name="project_name" maxlength="40" >
                 <br><br>Genre:<br>
                 <input type="text" name="genre" maxlength="40" >
             </div>
             <div class="testdiv">
                 <br><br>Book name:<br>
-                <input type="text" name="bookname" >
+                <input type="text" name="book_name" >
                 <br><br>Number of books:<br>
-                <input type="text" name="numberofbooks" id="numberofbooks" >
+                <input type="text" name="number_of_books" id="number_of_books" >
                 <p id="validation"></p>
             </div>
             <div class="testdiv">
@@ -36,7 +36,7 @@
     </div>
 <script>
 function validateForm () {
-    var isValid = !isNaN(document.getElementById('numberofbooks').value);
+    var isValid = !isNaN(document.getElementById('number_of_books').value);
     if (!isValid) alert('Please enter a valid number for \'Number of Books\'');
     return isValid;
 }

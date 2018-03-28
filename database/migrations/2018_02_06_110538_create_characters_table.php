@@ -25,6 +25,13 @@ class CreateCharactersTable extends Migration
             $table->string('date_of_death')->nullable();
             $table->string('year_of_description')->nullable();
             $table->string('occupation')->nullable();
+            $table->string('place_of_birth')->nullable();
+            $table->string('race')->nullable();
+            $table->string('national_loyalty')->nullable();
+            $table->string('organisation')->nullable();
+            $table->string('agenda')->nullable();
+            $table->string('weaponry')->nullable();
+            $table->string('skills')->nullable();
             $table->string('character_importance')->nullable();
             $table->string('height')->nullable();
             $table->string('hair_colour')->nullable();

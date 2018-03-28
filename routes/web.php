@@ -11,6 +11,7 @@
 |
 */
 
+Route::view('/dashboard', 'dashboard.index')->name('dashboard');
 
 Route::resource('/', 'DashboardController');
 
@@ -35,3 +36,19 @@ Route::resource('logout', 'LogoutController');
 Route::resource('resetpassword', 'ResetPasswordController');
 
 Route::resource('editcharacter', 'EditCharacterController');
+
+Route::post('project/create', 'ProjectController@create')->name('project.create');
+Route::resource('project', 'ProjectController');
+
+Route::resource('character', 'CharacterController');
+
+Route::resource('plotnote', 'PlotnoteController');
+
+Route::post('/login', 'Auth\AuthController@login')->name('login');
+Route::view('/login', 'auth.login')->name('login');
+Route::resource('auth', 'AuthController');
+
+Route::get('logout', ['uses' => 'Auth\AuthController@logout'])->name('logout');
+
+Route::post('/register', 'Auth\AuthController@register')->name('register');
+Route::view('/register', 'auth.register')->name('register');
