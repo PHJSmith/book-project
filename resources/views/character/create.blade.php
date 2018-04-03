@@ -20,49 +20,49 @@
                     </select>
                 </div>
             <div class="group">
-                <input type="text" name="forename" id="forename" maxlength="20" required placeholder="Forename">
+                <input type="text" name="forename" id="forename" maxlength="60" required placeholder="Forename">
             </div>
             <div class="group">
-                <input type="text" name="surname" id="surname" maxlength="20" required placeholder="Surname">
+                <input type="text" name="surname" id="surname" maxlength="60" required placeholder="Surname">
             </div>
             <div class="group">
                 <input type="text" name="nickname" id="nickname" maxlength="60" placeholder="Nickname">
             </div>
             <div class="group">
-                <input type="text" name="date_of_birth" id="date_of_birth" maxlength="20" placeholder="Date of birth">
+                <input type="text" name="date_of_birth" id="date_of_birth" maxlength="60" placeholder="Date of birth">
             </div>
             <div class="group">
-                <input type="text" name="date_of_death" id="date_of_death" maxlength="20" placeholder="Date of death">
+                <input type="text" name="date_of_death" id="date_of_death" maxlength="60" placeholder="Date of death">
             </div>
             <div class="group">
-                <input type="text" name="year_of_description" id="year_of_description" maxlength="20" placeholder="Year of description">
+                <input type="text" name="year_of_description" id="year_of_description" maxlength="60" placeholder="Year of description">
             </div>
             <div class="group">
                 <input type="text" name="occupation" id="occupation" maxlength="30" placeholder="Occupation">
             </div>
             <div class="group">
-                <input type="text" name="place_of_birth" id="place_of_birth" maxlength="20" placeholder="Place of birth">
+                <input type="text" name="place_of_birth" id="place_of_birth" maxlength="60" placeholder="Place of birth">
             </div>
             <div class="group">
-                <input type="text" name="race" id="race" maxlength="20" placeholder="Race">
+                <input type="text" name="race" id="race" maxlength="60" placeholder="Race">
             </div>
             <div class="group">
-                <input type="text" name="national_loyalty" id="national_loyalty" maxlength="20" placeholder="National loyalty">
+                <input type="text" name="national_loyalty" id="national_loyalty" maxlength="60" placeholder="National loyalty">
             </div>
             <div class="group">
-                <input type="text" name="organisation" id="organisation" maxlength="20" placeholder="Organisation">
+                <input type="text" name="organisation" id="organisation" maxlength="60" placeholder="Organisation">
             </div>
             <div class="group">
-                <input type="text" name="agenda" id="agenda" maxlength="20" placeholder="Agenda">
+                <input type="text" name="agenda" id="agenda" maxlength="60" placeholder="Agenda">
             </div>
             <div class="group">
-                <input type="text" name="weaponry" id="weaponry" maxlength="20" placeholder="Weaponry">
+                <input type="text" name="weaponry" id="weaponry" maxlength="60" placeholder="Weaponry">
             </div>
             <div class="group">
-                <input type="text" name="skills" id="skills" maxlength="20" placeholder="Skills">
+                <input type="text" name="skills" id="skills" maxlength="60" placeholder="Skills">
             </div>
             <div class="group">
-                <input type="text" name="character_importance" id="character_importance" maxlength="20" placeholder="Character importance">
+                <input type="text" name="character_importance" id="character_importance" maxlength="60" placeholder="Character importance">
             </div>
         </div>
             <div class="testdiv">
@@ -73,13 +73,13 @@
                     <input type="text" name="hair_colour" id="hair_colour" maxlength="60" placeholder="Hair colour">
                 </div>
                 <div class="group">
-                    <input type="text" name="eye_colour" id="eye_colour" maxlength="20" placeholder="Eye colour">
+                    <input type="text" name="eye_colour" id="eye_colour" maxlength="60" placeholder="Eye colour">
                 </div>
                 <div class="group">
                     <input type="text" name="weight" id="weight" placeholder="Weight (lb)">
                 </div>
                 <div class="group">
-                    <input type="text" name="hair_style" id="hair_style" maxlength="20" placeholder="Hair style">
+                    <input type="text" name="hair_style" id="hair_style" maxlength="60" placeholder="Hair style">
                 </div>
                 <div class="group">
                     <input type="text" name="misc_features" id="misc_features" placeholder="Other features">
